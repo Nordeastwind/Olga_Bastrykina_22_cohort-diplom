@@ -1,1 +1,1 @@
-select c.login as "login", (select count(1) from "Orders" where "courierId" = c.id and "inDelivery" = 'true') as "количество заказов в работе" from "Couriers" c ;
+select c.login, count(o."id") as "Количество заказов в работе" from "Couriers" as c inner join "Orders" as o on  o."courierId"=c.id where o."inDelivery" = true group by c.login;
