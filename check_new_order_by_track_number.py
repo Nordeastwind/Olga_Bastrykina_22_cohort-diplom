@@ -8,6 +8,7 @@ def positive_assert():
     rsp2 = sender_stand_request.get_order(track)
     assert rsp2.status_code == 200
 
+# Ольга Бастрыкина, 22-я когорта — Финальный проект. Инженер по тестированию плюс
 # Тест 1. Получение данных о заказе по трек-номеру
 def test1_check_new_order_by_track_number():
     positive_assert()
