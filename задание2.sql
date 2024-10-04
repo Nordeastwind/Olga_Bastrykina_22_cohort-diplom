@@ -1,0 +1,1 @@
+select "track", CASE WHEN "finished" = true then 2 WHEN "cancelled" = true then -1 when "inDelivery" = true then 1 end AS "статус" from "Orders" ;

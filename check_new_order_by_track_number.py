@@ -1,6 +1,6 @@
 import  sender_stand_request
 
-# Функция позитивной п роверки
+# Функция позитивной проверки
 def positive_assert():
     rsp = sender_stand_request.post_new_order()
     assert rsp.status_code == 201

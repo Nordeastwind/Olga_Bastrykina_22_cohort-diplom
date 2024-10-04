@@ -1,0 +1,1 @@
+select c.login as "login", (select count(1) from "Orders" where "courierId" = c.id and "inDelivery" = 'true') as "количество заказов в работе" from "Couriers" c ;
